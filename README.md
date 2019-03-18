@@ -7,7 +7,7 @@ A java web-service to handle files for ecdl
 ## Download
 * Open command line and move to your workspace.
 * Download project using your username: 
-<br>`> git clone https://github.com/kmponis-platform/web-service-ecdl.git`
+<br>`> git clone https://github.com/kmponis-ecdl/web-service-ecdl.git`
 * Go to project: 
 <br>`> cd /web-service-ecdl`
 
@@ -37,7 +37,7 @@ A java web-service to handle files for ecdl
 ## GIT Strategy
 * Open command line and move to your workspace.
 * Download project using your username: 
-<br>`> git clone https://github.com/kmponis-platform/web-service-ecdl.git`
+<br>`> git clone https://github.com/kmponis-ecdl/web-service-ecdl.git`
 * Go to develop branch
 <br>`> git checkout develop`
 * Create a slave branch - using the story number (ex. sml-9)
