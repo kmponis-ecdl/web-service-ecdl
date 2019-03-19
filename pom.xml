@@ -34,22 +34,10 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 		</dependency>
-
-		<!-- CROSS origin -->
-		<!-- NOTE: Need to add cors-filter-2.5.jar and java-property-utils-1.9.1 
-			to tomcat/lib -->
-		<!-- NOTE: Need to add filter properties on web.xml, check web-services-authentication 
-			README.md -->
-		<dependency>
-			<groupId>com.thetransactioncompany</groupId>
-			<artifactId>cors-filter</artifactId>
-			<version>2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.thetransactioncompany</groupId>
-			<artifactId>java-property-utils</artifactId>
-			<version>1.9.1</version>
-		</dependency>
+		<!-- <dependency> 
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency> -->
 
 		<!-- Swagger Stuff -->
 		<dependency>

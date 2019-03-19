@@ -1,29 +1,45 @@
 package com.web.service.ecdl;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-/*
- * Access point for application, for .war packaging. Add <packaging>war</packaging> bellow
- * <name>web-service-files</name> in pom.xml
+/* @formatter:off
+ * WAR packaging:
+ * - Changes:
+ * pom.xml - Use: <packaging>war</packaging>
+ * pom.xml - Not Use: <artifactId>spring-boot-starter-actuator</artifactId>
+ * Home.java - Use: code bellow
+ * ApplicationInitializer.java - Use: class
+ * - Access:
+ * localhost:8080/web-service-ecdl
+ * - Swagger:
+ * localhost:8080/web-service-ecdl/swagger-ui.html
  */
-// @Configuration
-// @EnableWebMvc
-// @ComponentScan
-// public class Home {
-// }
-
 @Configuration
-@EnableAutoConfiguration
+@EnableWebMvc
 @ComponentScan
-@SpringBootApplication
 public class Home {
-
-  public static void main(String[] args) {
-    new SpringApplicationBuilder(Home.class).web(WebApplicationType.SERVLET).run(args);
-  }
 }
+
+/* 
+ * JAR packaging:
+ * - Changes:
+ * pom.xml - Use: <packaging>jar</packaging>
+ * pom.xml - Use: <artifactId>spring-boot-starter-actuator</artifactId> 
+ * Home.java - Use: bellow class
+ * ApplicationInitializer.java - Not Use: class
+ * - Access: 
+ * localhost:8080
+ * - Swagger:
+ * localhost:8080/swagger-ui.html
+ */
+//@Configuration
+//@EnableAutoConfiguration
+//@ComponentScan
+//@SpringBootApplication
+//public class Home {
+//  public static void main(String[] args) {
+//    new SpringApplicationBuilder(Home.class).web(WebApplicationType.SERVLET).run(args);
+//  }
+//}
